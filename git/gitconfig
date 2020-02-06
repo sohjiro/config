@@ -1,0 +1,116 @@
+[user]
+	name = sohjiro
+	email = felipe@makingdevs.com
+[core]
+	editor = vim
+	editor = vim
+	pager = less -FRSX
+	whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+	quotepath = false
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+	ui = true
+	pager = true
+
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+
+#[color "diff"]
+#	meta = yellow bold
+#	frag = magenta bold
+#	old = red bold
+#	new = green bold
+
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+
+[diff]
+	renamelimit = 0
+	tool = vimdiff
+
+[apply]
+	whitespace = fix
+
+[mergetool]
+	keepBackup = true
+[push]
+	default = simple
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[merge]
+	tool = vimdiff
+[difftool]
+	prompt = false
+
+[alias]
+	st = status
+	au = add -u .
+	ci = commit
+	ciam = commit --amend
+	br = branch
+	co = checkout
+	df = diff
+	lg = log
+	lp = log -p
+	lt = log --topo-order
+	gl = log --graph
+	# glp = log --graph --pretty=oneline --abbrev-commit
+	glt = log --pretty=format:'%h : %s' --topo-order --graph
+	rl = reflog
+	sb = show-branch
+	brm = branch --merged
+	brnm = branch --no-merged
+	rnc = revert --no-commit
+	com = checkout master
+	hard = reset --hard
+	me = merge --no-commit --no-ff
+	ls = ls-files
+	pu = pull
+	cp = cherry-pick
+	cpnx = cherry-pick --no-commit -x
+	# show conflicting merge in gitk:
+	gitkconflict = !gitk --left-right HEAD...MERGE_HEAD
+	# prune all tracking local branches that have been removed from remote:
+	prune-all = !git remote | xargs -n 1 git remote prune
+	# show full history in gitk (including "deleted" branches and stashes)
+	history-all = !gitk --all $( git fsck | awk '/dangling commit/ {print $3}' )
+	# show list of contributors in descending order by number of commits
+	rank = shortlog -sn --no-merges
+	# given a string for an author, try to figure out full name and email:
+	whois = "!sh -c 'git log -i -1 --pretty=\"format:%an <%ae>\n\" --author=\"$1\"' -"
+	# given any git object, try to show it briefly
+	whatis = show -s --pretty='tformat:%h (%s, %ad)' --date=short
+	# Search for a given string in all patches and print commit messages
+	# example: search for any commit that adds or removes string "foobar"
+	#     git searchcommits foobar
+	# example: search commits for string "foobar" in directory src/lib
+	#     git searchcommits foobar src/lib
+	# example: search commits for "foobar", print full diff of commit with 1 line context
+	#     git searchcommits foobar --pickaxe-all -U1 src/lib
+	searchcommits = "!f() { query=\"$1\"; shift; git log -S\"$query\" \"$@\"; }; f \"$@\""
+	ds = !git --no-pager diff --stat -M -w
+	changes = log --oneline --reverse
+	# fork = !sh -c 'git rev-list --boundary $1...$2 | grep ^- | cut -c2-'
+	graph = log --graph --oneline --decorate
+	info = config --list
+	pop = !git stash apply && git stash clear
+	staged = diff --cached
+	summary = log --oneline
+	tags = tag -n1 -l
+	dfdiff = diff -w --diff-filter=AM
+	lol = log --pretty=oneline --abbrev-commit --graph --decorate
+	my = log --pretty=format:'%Cred%h %C(yellow)%d %Cblue%ad%Creset %cn %Cgreen%s%Creset' --graph --relative-date
+  dt = difftool
+[filter "lfs"]
+	smudge = git-lfs smudge %f
+	required = true
+	clean = git-lfs clean %f
+

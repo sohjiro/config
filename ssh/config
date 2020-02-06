@@ -1,0 +1,29 @@
+# Personal account, - the default config
+Host gitlab.com
+  HostName gitlab.com
+  IdentityFile ~/.ssh/id_rsa
+
+Host gitlab.bunsan.io
+  HostName gitlab.bunsan.io
+  IdentityFile ~/.ssh/id_rsa_bunsan
+
+Host estunnel
+HostName 52.14.68.140
+User ec2-user
+IdentitiesOnly yes
+IdentityFile ~/Documents/bunsan/land_on_earth/land_on_earth.pem
+LocalForward 9200 vpc-landonearth-pu6vqykgfjjwapomfebj7nivum.us-east-2.es.amazonaws.com:443
+
+Host demographics_tunnel
+HostName 52.14.68.140
+User ec2-user
+IdentitiesOnly yes
+IdentityFile ~/Documents/bunsan/land_on_earth/land_on_earth.pem
+LocalForward 9300 vpc-loe-demographics-b6oxv3wgq5phhsshb36szuqjmq.us-east-2.es.amazonaws.com:443
+
+Host pois_tunnel
+HostName 52.14.68.140
+User ec2-user
+IdentitiesOnly yes
+IdentityFile ~/Documents/bunsan/land_on_earth/land_on_earth.pem
+LocalForward 9400 vpc-loe-pois-z4z6oira5zui2vns5q6w3hpkti.us-east-2.es.amazonaws.com:443

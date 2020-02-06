@@ -1,0 +1,26 @@
+# install brew
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+# install fish
+brew install fish
+
+# install omf
+curl -L https://get.oh-my.fish | fish
+
+# install omf tools
+omf install robbyrussell
+omf install cbjohnson
+omf install asdf
+omf install sdk
+
+# install asdf tools
+asdf plugin add tmux
+asdf plugin add erlang
+asdf plugin add elixir
+
+# brew install tools
+brew install coreutils automake autoconf openssl libyaml readline libxslt libtool unixodbc unzip curl
+brew install tmux
+brew install httpie
+brew install jq
+

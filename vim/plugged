@@ -1,0 +1,33 @@
+" In this file you can put your own plugins
+" Elixir support for vim.
+Plug 'elixir-editors/vim-elixir'
+
+" Give information about your elixir project in vim.
+Plug 'slashmili/alchemist.vim'
+
+" Syntax checking hacks for vim
+" Plug 'vim-syntastic/syntastic'
+
+" VLide.vim is a global plugin for interactive presentations.
+" Plug 'javier-lopez/vlide.vim'
+
+" Elm plugin for Vim
+" Plug 'elmcast/elm-vim'
+
+" This plugin allows you to lint while you type.
+Plug 'w0rp/ale'
+
+" Run your tests at the speed of thought
+Plug 'janko-m/vim-test'
+
+" Vim and tmux, sittin' in a tree...
+Plug 'christoomey/vim-tmux-runner'
+
+" Vim plugin that displays tags in a window, ordered by scope
+Plug 'majutsushi/tagbar'
+
+" Exuberant CTags support for the Elixir language.
+Plug 'mmorearty/elixir-ctags'
+
+" A vim plugin for working with mustache and handlebars templates.
+Plug 'mustache/vim-mustache-handlebars'
