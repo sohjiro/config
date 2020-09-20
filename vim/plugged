@@ -6,7 +6,7 @@ Plug 'elixir-editors/vim-elixir'
 Plug 'slashmili/alchemist.vim'
 
 " Syntax checking hacks for vim
-" Plug 'vim-syntastic/syntastic'
+Plug 'vim-syntastic/syntastic'
 
 " VLide.vim is a global plugin for interactive presentations.
 " Plug 'javier-lopez/vlide.vim'
@@ -31,3 +31,6 @@ Plug 'mmorearty/elixir-ctags'
 
 " A vim plugin for working with mustache and handlebars templates.
 Plug 'mustache/vim-mustache-handlebars'
+
+" Vim syntax highlighting for Vue components.
+Plug 'posva/vim-vue'
