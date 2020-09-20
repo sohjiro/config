@@ -17,10 +17,11 @@ omf install sdk
 asdf plugin add tmux
 asdf plugin add erlang
 asdf plugin add elixir
+asdf plugin add rebar
 
 # brew install tools
 brew install coreutils automake autoconf openssl libyaml readline libxslt libtool unixodbc unzip curl
 brew install tmux
 brew install httpie
-brew install jq
-
+# brew install jq
+brew install wxwidgets
