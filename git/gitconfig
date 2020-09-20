@@ -1,5 +1,5 @@
 [user]
-	name = sohjiro
+	name = Sohjiro
 	email = felipe@makingdevs.com
 [core]
 	editor = vim
@@ -113,4 +113,3 @@
 	smudge = git-lfs smudge %f
 	required = true
 	clean = git-lfs clean %f
-
