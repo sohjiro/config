@@ -76,4 +76,5 @@ ln -s ~/config/fish/conf.d/git_alias.fish ~/.config/fish/conf.d/
 echo "\033[0;34mAdding config.fish \033[0m"
 ln -s ~/config/fish/config.fish ~/.config/fish/
 
-
+echo "\033[0;34mAdding ssh config \033[0m"
+ln -s ~/config/ssh/* ~/.ssh/
