@@ -1,16 +1,3 @@
-# install brew
-echo "\033[0;34mInstalling brew...\033[0m"
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-# install fish
-echo "\033[0;34mInstalling fish...\033[0m"
-brew install fish
-
-# install omf
-echo "\033[0;34mInstalling omf...\033[0m"
-curl -L https://get.oh-my.fish | fish
-
-
 OMF_TOOLS=(robbyrussell cbjohnson asdf sdk)
 echo "\033[0;34mThe following OMF tools will be installed: \033[37m${OMF_TOOLS[@]}...\033[0m"
 
@@ -49,8 +36,11 @@ brew install git-secret
 echo "\033[0;34mInstalling \033[37mxpdf\033[0m"
 brew install xpdf
 
+echo "\033[0;34mGetting \033[37msdkman\033[0m"
+curl -s "https://get.sdkman.io" | bash
+
 echo "\033[0;34mInstalling \033[37mjava 10.0.2-zulu\033[0m"
-fish -c "sdk install \033[37mjava 10.0.2-zulu"
+fish -c "sdk install java 10.0.2-zulu"
 
 echo "\033[0;34mInstalling \033[37merlang 22.2.8\033[0m"
 fish -c "asdf install erlang 22.2.8"
@@ -58,23 +48,25 @@ fish -c "asdf install erlang 22.2.8"
 echo "\033[0;34mInstalling elixir 1.10.4\033[0m"
 fish -c "asdf install elixir 1.10.4"
 
+echo "\033[0;34mAdding tmux config\033[0m"
+ln -s `pwd`/tmux/tmux.conf ~/.tmux.conf
+
+echo "\033[0;34mAdding gitconfig config\033[0m"
+ln -s `pwd`/git/gitconfig ~/.gitconfig
+
+echo "\033[0;34mAdding git_alias for fish \033[0m"
+ln -s `pwd`/fish/conf.d/git_alias.fish ~/.config/fish/conf.d/
+
+echo "\033[0;34mAdding config.fish \033[0m"
+ln -s `pwd`/fish/config.fish ~/.config/fish/
+
+echo "\033[0;34mAdding ssh config \033[0m"
+ln -s `pwd`/ssh/* ~/.ssh/
+
 echo "\033[0;34mInstalling vim configuration\033[0m"
 curl -L https://raw.githubusercontent.com/sohjiro/.vim/master/run_config.sh | sh
 
 echo "\033[0;34mAdding vim files config\033[0m"
-ln -s ~/config/vim/* ~/.vim/custom/
+ln -s `pwd`/vim/config ~/.vim/custom/config
+ln -s `pwd`/vim/plugged ~/.vim/custom/plugged
 
-echo "\033[0;34mAdding tmux config\033[0m"
-ln -s ~/config/tmux/tmux.conf ~/.tmux.conf
-
-echo "\033[0;34mAdding gitconfig config\033[0m"
-ln -s ~/config/git/gitconfig ~/.gitconfig
-
-echo "\033[0;34mAdding git_alias for fish \033[0m"
-ln -s ~/config/fish/conf.d/git_alias.fish ~/.config/fish/conf.d/
-
-echo "\033[0;34mAdding config.fish \033[0m"
-ln -s ~/config/fish/config.fish ~/.config/fish/
-
-echo "\033[0;34mAdding ssh config \033[0m"
-ln -s ~/config/ssh/* ~/.ssh/
