@@ -20,7 +20,7 @@ done
 
 # brew install tools
 echo "\033[0;34mInstalling \033[37mcoreutils and more\033[0m"
-bundle install
+brew bundle
 
 echo "\033[0;34mGetting \033[37msdkman\033[0m"
 curl -s "https://get.sdkman.io" | bash
