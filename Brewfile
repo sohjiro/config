@@ -28,7 +28,7 @@ brew "httpie"
 
 # brew "xpdf"
 
-brew "postgres"
+brew "postgresql@13"
 
 brew "pgcli"
 
