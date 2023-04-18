@@ -1,6 +1,6 @@
 # install brew
 echo "\033[0;34mInstalling brew...\033[0m"
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # install fish
 echo "\033[0;34mInstalling fish...\033[0m"
