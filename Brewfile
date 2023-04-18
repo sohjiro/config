@@ -1,37 +1,37 @@
-brew coreutils
+brew "coreutils"
 
-brew automake
+brew "automake"
 
-brew autoconf
+brew "autoconf"
 
-brew openssl
+brew "openssl"
 
-brew libyaml
+brew "libyaml"
 
-brew readline
+brew "readline"
 
-brew libxslt
+brew "libxslt"
 
-brew libtool
+brew "libtool"
 
-brew unixodbc
+brew "unixodbc"
 
-brew unzip
+brew "unzip"
 
-brew curl
+brew "curl"
 
-brew tmux
+brew "tmux"
 
-brew httpie
+brew "httpie"
 
-brew wxwidgets
+# brew "wxwidgets"
 
-brew xpdf
+# brew "xpdf"
 
-brew postgres
+brew "postgres"
 
-brew pgcli
+brew "pgcli"
 
-brew exa
+brew "exa"
 
-brew bat
+brew "bat"
