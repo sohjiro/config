@@ -1,5 +1,3 @@
-brew install
-
 brew coreutils
 
 brew automake
